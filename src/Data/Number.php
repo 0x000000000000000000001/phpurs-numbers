@@ -11,11 +11,11 @@ $isFinite = function($n) use (&$isFinite) {
 };
 
 $fromStringImpl = function($str, $isFinite = null, $just = null, $nothing = null) use (&$fromStringImpl) {
-    if (func_num_args() < 4) {
-        $__args = func_get_args();
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$fromStringImpl) {
 
-            return $fromStringImpl(...array_merge($__args, $more));
+            return $fromStringImpl(...\array_merge($__args, $more));
         };
     }
     // JS parseFloat behavior: parse leading float
@@ -34,11 +34,11 @@ $asin = function($n) use (&$asin) { return asin($n); };
 $atan = function($n) use (&$atan) { return atan($n); };
 
 $atan2 = function($y, $x = null) use (&$atan2) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$atan2) {
 
-            return $atan2(...array_merge($__args, $more));
+            return $atan2(...\array_merge($__args, $more));
         };
     }
     return atan2($y, $x);
@@ -51,46 +51,46 @@ $floor = function($n) use (&$floor) { return floor($n); };
 $log = function($n) use (&$log) { return log($n); };
 
 $max = function($n1, $n2 = null) use (&$max) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$max) {
 
-            return $max(...array_merge($__args, $more));
+            return $max(...\array_merge($__args, $more));
         };
     }
     if (is_nan($n1) || is_nan($n2)) return NAN;
-    return max($n1, $n2);
+    return \max($n1, $n2);
 };
 
 $min = function($n1, $n2 = null) use (&$min) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$min) {
 
-            return $min(...array_merge($__args, $more));
+            return $min(...\array_merge($__args, $more));
         };
     }
     if (is_nan($n1) || is_nan($n2)) return NAN;
-    return min($n1, $n2);
+    return \min($n1, $n2);
 };
 
 $pow = function($n, $p = null) use (&$pow) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$pow) {
 
-            return $pow(...array_merge($__args, $more));
+            return $pow(...\array_merge($__args, $more));
         };
     }
     return pow($n, $p);
 };
 
 $remainder = function($n, $m = null) use (&$remainder) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$remainder) {
 
-            return $remainder(...array_merge($__args, $more));
+            return $remainder(...\array_merge($__args, $more));
         };
     }
     return fmod($n, $m);
