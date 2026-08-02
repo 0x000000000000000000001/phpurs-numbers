@@ -1,5 +1,1 @@
-package:
-  name: "numbers"
-  dependencies:
-    - functions
-    - maybe
+spago.php.yaml
