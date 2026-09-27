@@ -88,8 +88,6 @@ workspace:
       path: "../phpurs-now"
     nullable:
       path: "../phpurs-nullable"
-    numbers:
-      path: "../phpurs-numbers"
     partial:
       path: "../phpurs-partial"
     prelude:
