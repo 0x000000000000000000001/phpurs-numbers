@@ -3,6 +3,7 @@
 /.pulp-cache/
 output/
 output.bak/
+/.purmeta/
 /.psci*
 /src/.webpack.js
 .DS_Store
