@@ -1,16 +1,16 @@
 <?php
 
 $nan = NAN;
-$isNaN = function($n) use (&$isNaN) {
+$isNaN = function ($n) {
     return is_nan($n);
 };
 
 $infinity = INF;
-$isFinite = function($n) use (&$isFinite) {
+$isFinite = function ($n) {
     return is_finite($n);
 };
 
-$fromStringImpl = function($str, $isFinite, $just, $nothing) use (&$fromStringImpl) {
+$fromStringImpl = function ($str, $isFinite, $just, $nothing) {
     // JS parseFloat behavior: parse leading float
     if (preg_match('/^[+-]?(?:(?:\d+\.?\d*)|(?:\.\d+))(?:[eE][+-]?\d+)?/', trim($str), $matches)) {
         $num = floatval($matches[0]);
@@ -21,52 +21,86 @@ $fromStringImpl = function($str, $isFinite, $just, $nothing) use (&$fromStringIm
     return $nothing;
 };
 
-$abs = function($n) use (&$abs) { return abs($n); };
-$acos = function($n) use (&$acos) { return acos($n); };
-$asin = function($n) use (&$asin) { return asin($n); };
-$atan = function($n) use (&$atan) { return atan($n); };
+$abs = function ($n) {
+    return abs($n);
+};
+$acos = function ($n) {
+    return acos($n);
+};
+$asin = function ($n) {
+    return asin($n);
+};
+$atan = function ($n) {
+    return atan($n);
+};
 
-$atan2 = function($y, $x) use (&$atan2) {
+$atan2 = function ($y, $x) {
     return atan2($y, $x);
 };
 
-$ceil = function($n) use (&$ceil) { return ceil($n); };
-$cos = function($n) use (&$cos) { return cos($n); };
-$exp = function($n) use (&$exp) { return exp($n); };
-$floor = function($n) use (&$floor) { return floor($n); };
-$log = function($n) use (&$log) { return log($n); };
+$ceil = function ($n) {
+    return ceil($n);
+};
+$cos = function ($n) {
+    return cos($n);
+};
+$exp = function ($n) {
+    return exp($n);
+};
+$floor = function ($n) {
+    return floor($n);
+};
+$log = function ($n) {
+    return log($n);
+};
 
-$max = function($n1, $n2) use (&$max) {
-    if (is_nan($n1) || is_nan($n2)) return NAN;
+$max = function ($n1, $n2) {
+    if (is_nan($n1) || is_nan($n2)) {
+        return NAN;
+    }
     return \max($n1, $n2);
 };
 
-$min = function($n1, $n2) use (&$min) {
-    if (is_nan($n1) || is_nan($n2)) return NAN;
+$min = function ($n1, $n2) {
+    if (is_nan($n1) || is_nan($n2)) {
+        return NAN;
+    }
     return \min($n1, $n2);
 };
 
-$pow = function($n, $p) use (&$pow) {
+$pow = function ($n, $p) {
     return pow($n, $p);
 };
 
-$remainder = function($n, $m) use (&$remainder) {
+$remainder = function ($n, $m) {
     return fmod($n, $m);
 };
 
-$round = function($n) use (&$round) { return round($n); };
+$round = function ($n) {
+    return round($n);
+};
 
-$sign = function($x) use (&$sign) {
-    if (is_nan($x)) return NAN;
-    if ($x === 0.0 || $x === -0.0) return $x;
+$sign = function ($x) {
+    if (is_nan($x)) {
+        return NAN;
+    }
+    if ($x === 0.0 || $x === -0.0) {
+        return $x;
+    }
     return $x < 0 ? -1.0 : 1.0;
 };
 
-$sin = function($n) use (&$sin) { return sin($n); };
-$sqrt = function($n) use (&$sqrt) { return sqrt($n); };
-$tan = function($n) use (&$tan) { return tan($n); };
+$sin = function ($n) {
+    return sin($n);
+};
+$sqrt = function ($n) {
+    return sqrt($n);
+};
+$tan = function ($n) {
+    return tan($n);
+};
 
-$trunc = function($x) use (&$trunc) {
+$trunc = function ($x) {
     return $x < 0 ? ceil($x) : floor($x);
 };
 

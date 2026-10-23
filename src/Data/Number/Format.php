@@ -1,18 +1,18 @@
 <?php
 
-$toPrecisionNative = function($d, $num) use (&$toPrecisionNative) {
+$toPrecisionNative = function ($d, $num) {
     return sprintf("%.{$d}g", $num);
 };
 
-$toFixedNative = function($d, $num) use (&$toFixedNative) {
+$toFixedNative = function ($d, $num) {
     return sprintf("%.{$d}F", $num);
 };
 
-$toExponentialNative = function($d, $num) use (&$toExponentialNative) {
+$toExponentialNative = function ($d, $num) {
     return sprintf("%.{$d}e", $num);
 };
 
-$toString = function($num) use (&$toString) {
+$toString = function ($num) {
     return strval($num);
 };
 

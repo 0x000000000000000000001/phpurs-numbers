@@ -1,5 +1,7 @@
 # phpurs-numbers
 
+> PHPurs checkout: see the [PHP library development guide](https://github.com/0x000000000000000000001/phpurs/blob/main/docs/libraries.md) for the TAST toolchain, FFI conventions and validation commands. Run `./bin/test` from this package with the PHP toolchain prepared.
+
 [![Latest release](http://img.shields.io/github/release/purescript/purescript-numbers.svg)](https://github.com/purescript/purescript-numbers/releases)
 [![Build status](https://github.com/purescript/purescript-numbers/workflows/CI/badge.svg?branch=master)](https://github.com/purescript/purescript-numbers/actions?query=workflow%3ACI+branch%3Amaster)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-numbers/badge)](https://pursuit.purescript.org/packages/purescript-numbers)
